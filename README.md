@@ -36,53 +36,54 @@ Users can upload a dataset, select features, analyze clusters, and export a **PD
 ### 1️⃣ Install Requirements
 ```bash
 pip install -r requirements.txt
+```
 2️⃣ Run the Streamlit App
-bash
-Copy code
-streamlit run customer_segmentation.py
-📁 Dataset Format
+```bash
+streamlit run app.py
+```
+---
+
+## 📁 Dataset Format
+
 Your dataset should be a CSV file containing numeric customer attributes such as:
 
-CustomerID	Age	Annual Income (k$)	Spending Score (1-100)
-001	19	15	39
-002	21	15	81
+| CustomerID | Age | Annual Income (k$) | Spending Score (1-100) |
+|------------|-----|-------------------|------------------------|
+| 001        | 19  | 15                | 39                     |
+| 002        | 21  | 15                | 81                     |
 
-You may select any 2+ numeric columns during runtime.
+> You may select **any 2+ numeric columns** during runtime.
 
-🎯 How It Works
-Upload dataset
 
-Select the features (e.g., Income & Spending Score)
+## 🎯 How It Works
+- Upload dataset  
+- Select the features (e.g., Income & Spending Score)  
+- View Elbow Curve and choose best number of clusters K  
+- Visualize cluster scatter plot with centroids  
+- Analyze cluster summary row-wise  
+- Export PDF Report (optional)
 
-View Elbow Curve → choose best number of clusters K
+  
+## 📄 Sample Output (Cluster Interpretation)
 
-Visualize the cluster scatter plot with centroids
+Cluster 1 → Low income, low spending  
+Cluster 2 → High income, high spending  
+Cluster 3 → High income, low spending  
+Cluster 4 → Low income, high spending  
 
-Analyze cluster summary table
+This helps businesses identify different customer types and plan targeted strategies.
 
-Export PDF Report (optional)
+  
+## 📤 PDF Report Example Includes:
+Number of clusters  
+Cluster size  
+Average feature values  
+Summary insights  
 
-📄 Sample Output (Cluster Plot)
-yaml
-Copy code
-Cluster 1: Low income, low spending
-Cluster 2: High income, high spending
-Cluster 3: High income, low spending
-Cluster 4: Low income, high spending
-Each group helps businesses target different customer types effectively.
-
-📤 PDF Report Example
-The exported report includes:
-
-Cluster count
-
-Average feature values for every cluster
-
-Organized summary for understanding customer behavior
-
-Useful for:
-✅ Business presentations
-✅ Sales Optimization
-✅ Understanding Customer Behaviour
-✅ Academic submissions
+  
+## Useful For:
+✅ Business presentations   
+✅ Sales optimization  
+✅ Understanding customer behavior  
+✅ Academic project submission  
 ✅ Marketing strategy planning
