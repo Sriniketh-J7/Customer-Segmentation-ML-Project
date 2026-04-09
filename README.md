@@ -5,6 +5,12 @@ Users can upload a dataset, select features, analyze clusters, and export a **PD
 
 ---
 
+# 🌐 Live Demo
+
+🚀 Try the app here: https://customer-segmentation-ml-project-j7.streamlit.app/
+
+---
+
 ## 📌 Features
 
 | Feature | Description |
